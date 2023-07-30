@@ -6,5 +6,17 @@ module.exports = {
     title: `Portfolio`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
-}
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/pages/blog`,
+      },
+    },
+    "gatsby-plugin-mdx",
+    "gatsby-transformer-sharp",
+  ],
+};
