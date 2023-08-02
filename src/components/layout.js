@@ -1,35 +1,30 @@
 import * as React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { Link } from "gatsby";
 
 const Layout = ({ pageTitle, children }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
-  console.log(data);
-
   return (
-    <div>
-      <header>{data.site.siteMetadata.title}</header>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
+    <div className="bg-blue-black h-screen w-screen">
+      <nav className="pl-16 pt-8">
+        <ul className="flex flex-col space-y-4">
+          <li className="flex items-center">
+            <div className="mr-4 h-px w-12 bg-bright-gray"></div>
+            <Link to="/about" className="text-bright-gray">
+              about
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/experience" className="text-bright-gray">
+              experience
+            </Link>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
+            <Link to="/projects" className="text-bright-gray">
+              projects
+            </Link>
           </li>
         </ul>
       </nav>
+
       <main>
         <h1>{pageTitle}</h1>
         {children}
