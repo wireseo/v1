@@ -27,6 +27,16 @@ const Tab = ({ to, text }) => {
 const Layout = ({ pageTitle, children }) => {
   return (
     <div className="bg-blue-black h-screen w-screen">
+      <main>
+        <div className="flex flex-col p-5">
+          <span className="text-[#FFFFFF] text-6xl">Eryn Seo</span>
+          <span className="text-[#FFFFFF] text-xl">
+            Tech Lead at MarinaChain
+          </span>
+        </div>
+
+        {children}
+      </main>
       <nav className="pl-16 pt-8">
         <ul className="flex flex-col space-y-4">
           <Tab to="/about" text="about" />
@@ -34,11 +44,6 @@ const Layout = ({ pageTitle, children }) => {
           <Tab to="/projects" text="projects" />
         </ul>
       </nav>
-
-      <main>
-        <h1>{pageTitle}</h1>
-        {children}
-      </main>
     </div>
   );
 };
