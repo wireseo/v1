@@ -12,7 +12,11 @@ module.exports = {
       "bright-gray": "#e2e8f0",
       "dark-gray": "#64748b",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Roboto Slab"],
+      },
+    },
   },
   plugins: [],
 };
