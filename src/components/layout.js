@@ -29,7 +29,7 @@ const Layout = ({ pageTitle, children }) => {
     <div className="bg-blue-black h-screen w-screen">
       <main>
         <div className="flex flex-col p-5">
-          <span className="text-[#FFFFFF] text-6xl">Eryn Seo</span>
+          <span className="text-[#FFFFFF] text-6xl font-bold">Eryn Seo</span>
           <span className="text-[#FFFFFF] text-xl">
             Tech Lead at MarinaChain
           </span>
