@@ -23,7 +23,8 @@
     "gatsby-source-filesystem": "^5.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "typeface-roboto-slab": "^1.1.13"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
