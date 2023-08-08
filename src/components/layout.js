@@ -6,12 +6,12 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div className="bg-blue-black h-screen w-screen relative">
       <main>
-        <div className="flex flex-col p-5">
+        <div className="flex flex-col p-16">
           <span className="text-[#FFFFFF] text-6xl font-bold">Eryn Seo</span>
           <span className="text-[#FFFFFF] text-xl">
             Tech Lead at MarinaChain
           </span>
-          <span className="text-[#FFFFFF] text-sm font-light">
+          <span className="text-[#d7dde680] text-sm font-light">
             Inventive, elegant solutions for the web.
           </span>
         </div>
