@@ -13,7 +13,7 @@ const SocialIcon = ({ iconSrc, altText, profileLink }) => {
     <img
       src={iconSrc}
       alt={altText}
-      className="w-5 h-5 icon cursor-pointer"
+      className="w-5 h-5 icon cursor-pointer fill-current text-white hover:text-bright-blue"
       onClick={openProfile}
     />
   );
