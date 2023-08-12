@@ -7,18 +7,18 @@ const Tab = ({ to, text }) => {
 
   return (
     <li
-      className="flex items-center w-1/6"
+      className="flex items-center"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
         className={`mr-4 h-px ${
-          isHovered ? "w-12" : "w-4"
+          isHovered ? "w-16" : "w-6"
         } bg-bright-gray transition-width duration-300 ease-in-out`}
       ></div>
-      <Link to={to} className="text-bright-gray">
+      <a href={to} className="text-bright-gray">
         {text}
-      </Link>
+      </a>
     </li>
   );
 };
