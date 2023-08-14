@@ -6,7 +6,21 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
       <section id="about" className="text-[#FFFFFF] p-48">
-        Here is the about{/* your about section content */}
+        My problem-solving journey began unexpectedly when I picked up Java as
+        an attempt to assist my high school principal with class scheduling. I
+        bore witness to the magic of what used to be months of intense manual
+        labor being reduced to a simple—and oh so satisfying—click of a button;
+        seeing how elegant code could efficiently streamline processes, I was
+        instantly hooked to the world of code. Since then, I've ventured into
+        the dynamic realm of startups, from the buzzing landscape of Silicon
+        Valley to the vibrant startup scene in Singapore's maritime industry. By
+        day, I craft tasteful front-end components and brainstorm ways to
+        optimize sprawling backends for multiple products at MarinaChain. By
+        night, I am a tinkerer at heart: you can find me writing indie music and
+        making things prettier via graphic design. I relish every opportunity to
+        dive into complex challenges, cherishing the process of creating elegant
+        solutions that captivate users with their intuitive design and seamless
+        experiences.
       </section>
 
       <section id="experience" className="text-[#FFFFFF] p-48">
