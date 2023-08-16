@@ -26,7 +26,7 @@ const Layout = ({ pageTitle, children }) => {
           <Socials />
         </main>
       </div>
-      <div className="basis-2/3">{children}</div>
+      <div className="overflow-auto basis-2/3">{children}</div>
     </div>
   );
 };
