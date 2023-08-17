@@ -1,7 +1,6 @@
 import * as React from "react";
 import Tab from "./tab";
 import Socials from "./socials";
-// import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const Layout = ({ pageTitle, children }) => {
   return (
