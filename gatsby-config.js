@@ -12,5 +12,6 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
     `gatsby-plugin-anchor-links`,
+    `gatsby-plugin-smoothscroll`,
   ],
 };
