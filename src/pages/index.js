@@ -1,6 +1,8 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import ExperienceCard from "../components/experienceCard";
+import { ExperienceProvider } from "../components/experienceProvider";
 
 const IndexPage = () => {
   return (
@@ -45,7 +47,31 @@ const IndexPage = () => {
           id="experience"
           className="text-[#FFFFFF] font-light min-w-[600px] "
         >
-          Here is the experience{/* your experience section content */}
+          <ExperienceProvider>
+            <ExperienceCard
+              startDate="Sep 2022"
+              endDate="Present"
+              jobTitle="Tech Lead"
+              company="MarinaChain"
+              techStack={["Vue", "Django", "PostgreSQL", "TailwindCSS"]}
+              link="https://www.example.com"
+              description="Developed several web applications, managed databases, etc."
+            />
+            <ExperienceCard
+              startDate="Jan 2021"
+              endDate="Dec 2021"
+              jobTitle="Software Engineer Intern"
+              company="Propel Software"
+              techStack={[
+                "Javascript",
+                "Apex (Java)",
+                "Lightning Web Components",
+                "Salesforce",
+              ]}
+              link="https://www.example.com"
+              description="Developed several web applications, managed databases, etc."
+            />
+          </ExperienceProvider>
         </section>
 
         <section
