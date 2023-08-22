@@ -54,7 +54,7 @@ const IndexPage = () => {
               jobTitle="Tech Lead"
               company="MarinaChain"
               techStack={["Vue", "Django", "PostgreSQL", "TailwindCSS"]}
-              link="https://www.example.com"
+              link="https://www.marinachain.io/"
               description="Developed several web applications, managed databases, etc."
             />
             <ExperienceCard
@@ -68,7 +68,7 @@ const IndexPage = () => {
                 "Lightning Web Components",
                 "Salesforce",
               ]}
-              link="https://www.example.com"
+              link="https://www.propelsoftware.com/"
               description="Developed several web applications, managed databases, etc."
             />
           </ExperienceProvider>
