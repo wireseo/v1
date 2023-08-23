@@ -8,7 +8,10 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
       <div className="space-y-40 p-48">
-        <section id="about" className="text-[#FFFFFF] font-light min-w-[600px]">
+        <section
+          id="about"
+          className="text-[#FFFFFF] font-light min-w-[600px] pt-8"
+        >
           My problem-solving journey began unexpectedly when I picked up Java as
           an attempt to assist my high school principal with class scheduling. I
           bore witness to the magic of what used to be months of intense manual
