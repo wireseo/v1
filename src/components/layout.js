@@ -7,6 +7,7 @@ import "../styles/cursorEffect.css";
 
 const Layout = ({ pageTitle, children }) => {
   useEffect(() => {
+    // The existing mousemove listener
     document.body.addEventListener("mousemove", (evt) => {
       const mouseX = evt.pageX;
       const mouseY = evt.pageY;
@@ -22,6 +23,31 @@ const Layout = ({ pageTitle, children }) => {
         stagger: -0.1,
       });
     });
+
+    // GSAP Inky Effect for cursor
+    const inkyTimeline = gsap.timeline({ repeat: -1, yoyo: true });
+
+    inkyTimeline
+      .to(".cursor", {
+        duration: 0.3,
+        borderRadius: "30% 70% 80% 20% / 30% 20% 80% 70%",
+        ease: "power3.inOut",
+      })
+      .to(".cursor", {
+        duration: 0.3,
+        borderRadius: "80% 20% 30% 70% / 80% 10% 90% 10%",
+        ease: "power3.inOut",
+      })
+      .to(".cursor", {
+        duration: 0.3,
+        borderRadius: "85% 15% 30% 70% / 85% 15% 35% 65%",
+        ease: "power3.inOut",
+      })
+      .to(".cursor", {
+        duration: 0.3,
+        borderRadius: "35% 65% 35% 65% / 85% 15% 35% 65%",
+        ease: "power3.inOut",
+      });
   }, []);
 
   return (
