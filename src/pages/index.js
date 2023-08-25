@@ -17,9 +17,10 @@ const IndexPage = () => {
           bore witness to the magic of what used to be months of intense manual
           labor being reduced to a simple—and oh so satisfying—click of a
           button; seeing how elegant code could efficiently streamline
-          processes, I was instantly hooked to the world of code. Since then,
-          I've ventured into the dynamic realm of startups, from the buzzing
-          landscape of{" "}
+          processes, I was instantly hooked to the world of code. <br />
+          <br />
+          Since then, I've ventured into the dynamic realm of startups, from the
+          buzzing landscape of{" "}
           <strong>
             <a
               href="https://www.propelsoftware.com/"
@@ -39,7 +40,15 @@ const IndexPage = () => {
           </strong>
           . By day, I craft tasteful front-end components and brainstorm ways to
           optimize sprawling backends for multiple products at MarinaChain. By
-          night, I am a tinkerer at heart: you can find me writing indie music
+          night, I am a tinkerer at heart: you can find me writing{" "}
+          <strong>
+            <a
+              href="https://open.spotify.com/artist/0w1g0B53ZzbTkbev0WDAmm?si=BMuVaWz-TZWUe0c7QdW32A"
+              className="text-bright-blue opacity-80 hover:opacity-100 transition-opacity duration-300"
+            >
+              indie music
+            </a>
+          </strong>{" "}
           and making things prettier via graphic design. I relish every
           opportunity to dive into complex challenges, cherishing the process of
           creating elegant solutions that captivate users with their intuitive
