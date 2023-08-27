@@ -2,12 +2,54 @@ import * as React from "react";
 import Tab from "./tab";
 import Socials from "./socials";
 import gsap from "gsap";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../styles/cursorEffect.css";
 
 const Layout = ({ pageTitle, children }) => {
+  const [activeTab, setActiveTab] = useState("about");
+
+  const handleScroll = (scrollableDiv) => {
+    const about = document.getElementById("about");
+    const experience = document.getElementById("experience");
+    const projects = document.getElementById("projects");
+
+    const midOfViewport = scrollableDiv.scrollTop + window.innerHeight / 2;
+
+    if (
+      midOfViewport >= projects.offsetTop &&
+      midOfViewport < projects.offsetTop + projects.offsetHeight
+    ) {
+      setActiveTab("projects");
+    } else if (
+      midOfViewport >= experience.offsetTop &&
+      midOfViewport < experience.offsetTop + experience.offsetHeight
+    ) {
+      setActiveTab("experience");
+    } else if (
+      midOfViewport >= about.offsetTop &&
+      midOfViewport < about.offsetTop + about.offsetHeight
+    ) {
+      setActiveTab("about");
+    }
+  };
+
   useEffect(() => {
-    // The existing mousemove listener
+    const scrollableDiv = document.querySelector(".overflow-auto");
+
+    if (scrollableDiv) {
+      scrollableDiv.addEventListener("scroll", () =>
+        handleScroll(scrollableDiv)
+      );
+
+      return () => {
+        scrollableDiv.removeEventListener("scroll", () =>
+          handleScroll(scrollableDiv)
+        );
+      };
+    }
+  }, []);
+
+  useEffect(() => {
     document.body.addEventListener("mousemove", (evt) => {
       const mouseX = evt.pageX;
       const mouseY = evt.pageY;
@@ -51,9 +93,24 @@ const Layout = ({ pageTitle, children }) => {
 
           <nav className="pl-16 pt-8">
             <ul className="flex flex-col space-y-4">
-              <Tab to="#about" text="about" />
-              <Tab to="#experience" text="experience" />
-              <Tab to="#projects" text="projects" />
+              <Tab
+                to="#about"
+                text="about"
+                isActive={activeTab === "about"}
+                setActiveTab={setActiveTab}
+              />
+              <Tab
+                to="#experience"
+                text="experience"
+                isActive={activeTab === "experience"}
+                setActiveTab={setActiveTab}
+              />
+              <Tab
+                to="#projects"
+                text="projects"
+                isActive={activeTab === "projects"}
+                setActiveTab={setActiveTab}
+              />
             </ul>
           </nav>
           <Socials />
