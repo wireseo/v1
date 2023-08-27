@@ -62,24 +62,24 @@ const Layout = ({ pageTitle, children }) => {
       gsap.to(".shape", {
         x: mouseX,
         y: mouseY,
-        stagger: -0.1,
+        ease: "power4.out",
+        stagger: -0.02,
       });
     });
   }, []);
 
   return (
     <div className="bg-blue-black h-screen w-screen relative flex">
+      <div className="cursor"></div>
+      <div className="shapes absolute top-0 left-0 z-0">
+        <div className="shape shape-1"></div>
+        <div className="shape shape-2"></div>
+        <div className="shape shape-3"></div>
+      </div>
+
       <div className="basis-1/3">
         <main>
-          <div className="cursor"></div>
-
-          <div className="flex flex-col p-16 relative overflow-hidden">
-            <div className="shapes absolute top-0 left-0 z-0">
-              <div className="shape shape-1"></div>
-              <div className="shape shape-2"></div>
-              <div className="shape shape-3"></div>
-            </div>
-
+          <div className="flex flex-col p-16 relative">
             <div className="text-layer">
               <h1 className="text-[#FFFFFF] text-6xl font-bold">Eryn Seo</h1>
               <h2 className="text-[#FFFFFF] text-xl">
@@ -116,6 +116,7 @@ const Layout = ({ pageTitle, children }) => {
           <Socials />
         </main>
       </div>
+
       <div className="overflow-auto basis-2/3">{children}</div>
     </div>
   );

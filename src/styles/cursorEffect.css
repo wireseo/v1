@@ -1,28 +1,22 @@
+.text-layer {
+  position: relative;
+  z-index: 2;
+}
+
 body,
 body * {
   cursor: none;
 }
 
 .shapes {
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   overflow: hidden;
-}
-
-.text-layer {
-  position: relative;
-  z-index: 2;
-  color: transparent;
-  mix-blend-mode: difference;
-}
-
-.text-layer h1,
-.text-layer h2,
-.text-layer h3 {
-  mix-blend-mode: difference;
+  z-index: 0;
 }
 
 .shape {
@@ -34,36 +28,37 @@ body * {
 
 .shape.shape-1 {
   background: #005ffe;
-  width: 650px;
-  height: 650px;
-  margin: -325px 0 0 -325px;
+  width: 40px; /* Adjusted size */
+  height: 40px; /* Adjusted size */
+  margin: -20px 0 0 -20px; /* Half of width/height to center it */
 }
 
 .shape.shape-2 {
   background: #ffe5e3;
-  width: 440px;
-  height: 440px;
-  margin: -220px 0 0 -220px;
+  width: 32px; /* Adjusted size */
+  height: 32px; /* Adjusted size */
+  margin: -16px 0 0 -16px; /* Half of width/height to center it */
 }
 
 .shape.shape-3 {
   background: #ffcc57;
-  width: 270px;
-  height: 270px;
-  margin: -135px 0 0 -135px;
+  width: 24px; /* Adjusted size */
+  height: 24px; /* Adjusted size */
+  margin: -12px 0 0 -12px; /* Half of width/height to center it */
 }
 
 .cursor {
   position: fixed;
   background: #ffffff;
-  width: 20px;
-  height: 20px;
-  margin: -10px 0 0 -10px;
+  width: 15px;
+  height: 15px;
+  margin: -7.5px 0 0 -7.5px;
   border-radius: 50%;
   will-change: transform;
   user-select: none;
   pointer-events: none;
   z-index: 10000;
+  mix-blend-mode: difference;
 }
 
 ::selection {
