@@ -93,6 +93,27 @@ const IndexPage = () => {
               Download Resume →
             </button>
           </a>
+          and making things prettier via graphic design. I relish every
+          opportunity to dive into complex challenges, cherishing the process of
+          creating elegant solutions that captivate users with their intuitive
+          design and seamless experiences.and making things prettier via graphic
+          design. I relish every opportunity to dive into complex challenges,
+          cherishing the process of creating elegant solutions that captivate
+          users with their intuitive design and seamless experiences.and making
+          things prettier via graphic design. I relish every opportunity to dive
+          into complex challenges, cherishing the process of creating elegant
+          solutions that captivate users with their intuitive design and
+          seamless experiences.and making things prettier via graphic design. I
+          relish every opportunity to dive into complex challenges, cherishing
+          the process of creating elegant solutions that captivate users with
+          their intuitive design and seamless experiences.and making things
+          prettier via graphic design. I relish every opportunity to dive into
+          complex challenges, cherishing the process of creating elegant
+          solutions that captivate users with their intuitive design and
+          seamless experiences.and making things prettier via graphic design. I
+          relish every opportunity to dive into complex challenges, cherishing
+          the process of creating elegant solutions that captivate users with
+          their intuitive design and seamless experiences.
         </section>
 
         <section
@@ -100,6 +121,27 @@ const IndexPage = () => {
           className="text-[#FFFFFF] font-light  min-w-[600px]"
         >
           Here is the projects{/* your projects section content */}
+          and making things prettier via graphic design. I relish every
+          opportunity to dive into complex challenges, cherishing the process of
+          creating elegant solutions that captivate users with their intuitive
+          design and seamless experiences.and making things prettier via graphic
+          design. I relish every opportunity to dive into complex challenges,
+          cherishing the process of creating elegant solutions that captivate
+          users with their intuitive design and seamless experiences.and making
+          things prettier via graphic design. I relish every opportunity to dive
+          into complex challenges, cherishing the process of creating elegant
+          solutions that captivate users with their intuitive design and
+          seamless experiences.and making things prettier via graphic design. I
+          relish every opportunity to dive into complex challenges, cherishing
+          the process of creating elegant solutions that captivate users with
+          their intuitive design and seamless experiences.and making things
+          prettier via graphic design. I relish every opportunity to dive into
+          complex challenges, cherishing the process of creating elegant
+          solutions that captivate users with their intuitive design and
+          seamless experiences.and making things prettier via graphic design. I
+          relish every opportunity to dive into complex challenges, cherishing
+          the process of creating elegant solutions that captivate users with
+          their intuitive design and seamless experiences.
         </section>
       </div>
     </Layout>
