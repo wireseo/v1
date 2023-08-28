@@ -7,7 +7,7 @@ import { ExperienceProvider } from "../components/experienceProvider";
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
-      <div className="space-y-40 p-48">
+      <div className="space-y-20 px-16 md:space-y-40 md:p-48">
         <section
           id="about"
           className="text-[#FFFFFF] font-light min-w-[600px] pt-8"
@@ -93,6 +93,13 @@ const IndexPage = () => {
               Download Resume →
             </button>
           </a>
+        </section>
+
+        <section
+          id="projects"
+          className="text-[#FFFFFF] font-light  min-w-[600px]"
+        >
+          Here is the projects{/* your projects section content */}
           and making things prettier via graphic design. I relish every
           opportunity to dive into complex challenges, cherishing the process of
           creating elegant solutions that captivate users with their intuitive
@@ -113,14 +120,30 @@ const IndexPage = () => {
           seamless experiences.and making things prettier via graphic design. I
           relish every opportunity to dive into complex challenges, cherishing
           the process of creating elegant solutions that captivate users with
-          their intuitive design and seamless experiences.
-        </section>
-
-        <section
-          id="projects"
-          className="text-[#FFFFFF] font-light  min-w-[600px]"
-        >
-          Here is the projects{/* your projects section content */}
+          their intuitive design and seamless experiences.Here is the projects
+          {/* your projects section content */}
+          and making things prettier via graphic design. I relish every
+          opportunity to dive into complex challenges, cherishing the process of
+          creating elegant solutions that captivate users with their intuitive
+          design and seamless experiences.and making things prettier via graphic
+          design. I relish every opportunity to dive into complex challenges,
+          cherishing the process of creating elegant solutions that captivate
+          users with their intuitive design and seamless experiences.and making
+          things prettier via graphic design. I relish every opportunity to dive
+          into complex challenges, cherishing the process of creating elegant
+          solutions that captivate users with their intuitive design and
+          seamless experiences.and making things prettier via graphic design. I
+          relish every opportunity to dive into complex challenges, cherishing
+          the process of creating elegant solutions that captivate users with
+          their intuitive design and seamless experiences.and making things
+          prettier via graphic design. I relish every opportunity to dive into
+          complex challenges, cherishing the process of creating elegant
+          solutions that captivate users with their intuitive design and
+          seamless experiences.and making things prettier via graphic design. I
+          relish every opportunity to dive into complex challenges, cherishing
+          the process of creating elegant solutions that captivate users with
+          their intuitive design and seamless experiences.Here is the projects
+          {/* your projects section content */}
           and making things prettier via graphic design. I relish every
           opportunity to dive into complex challenges, cherishing the process of
           creating elegant solutions that captivate users with their intuitive
