@@ -14,7 +14,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Roboto Slab"],
+        sans: ["Roboto Slab", "Roboto", "Manrope"],
       },
     },
   },
