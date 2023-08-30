@@ -10,7 +10,7 @@ const IndexPage = () => {
       <div className="space-y-20 px-16 md:space-y-40 md:p-48">
         <section
           id="about"
-          className="text-[#FFFFFF] font-light min-w-[600px] pt-8"
+          className="text-[#FFFFFF]/[0.8] font-light min-w-[600px] pt-8 leading-relaxed"
         >
           My problem-solving journey began unexpectedly when I picked up Java as
           an attempt to assist my high school principal with class scheduling. I
