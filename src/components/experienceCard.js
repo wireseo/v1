@@ -17,49 +17,57 @@ const ExperienceCard = ({
   const opacity = isAnyCardHovered ? "opacity-60" : "opacity-90";
 
   return (
-    <div
-      onMouseEnter={() => {
-        setIsAnyCardHovered(true);
-        setCardHovered(true);
-      }}
-      onMouseLeave={() => {
-        setIsAnyCardHovered(false);
-        setCardHovered(false);
-      }}
-      className={`p-4 mb-4 rounded-xl hover:bg-[#1e293b]/[0.5] transition-opacity ${opacity} hover:opacity-100 hover:bg-slate-800 hover:drop-shadow-lg`}
-    >
-      <span className="block mb-2">{`${startDate} - ${endDate}`}</span>
-
-      <div className="p-4">
-        <h3 className="font-semibold text-xl text-bright-blue mb-2">
-          {jobTitle}
-        </h3>
-        <span className="block mb-2">{company}</span>
-        <div className="mb-2 space-x-2">
-          {techStack.map((tech, index) => (
-            <span
-              key={index}
-              className="inline-block px-2 py-1 rounded text-white hover:bg-[#1e293b]/[0.5] rounded-2xl text-sm"
-            >
-              {tech}
-            </span>
-          ))}
+    <a href={link} className="no-underline block">
+      <div
+        onMouseEnter={() => {
+          setIsAnyCardHovered(true);
+          setCardHovered(true);
+        }}
+        onMouseLeave={() => {
+          setIsAnyCardHovered(false);
+          setCardHovered(false);
+        }}
+        className={`flex items-start p-4 mb-5 rounded-xl transition-opacity transition-background-color duration-300 ${opacity} hover:opacity-100 hover:bg-[#1e293b]/[0.5] hover:drop-shadow-lg`}
+      >
+        {/* Date part */}
+        <div className="mr-10">
+          <span className="block text-sm text-[#4e596b] font-medium">{`${startDate} — ${endDate}`}</span>
         </div>
-        {link && (
-          <div className="flex justify-end items-center mb-2">
-            <a
-              href={link}
-              className={`flex items-center space-x-1 transform transition-transform ${
-                isCardHovered ? "translate-x-4" : ""
-              } text-blue-500 hover:text-blue-700 border-b-2 border-blue-500 no-underline`}
-            >
-              <span>→</span>
-            </a>
+
+        {/* Main card */}
+        <div className={`flex-grow rounded-xl`}>
+          <div
+            className={`flex items-center font-normal mb-2 transition-colors duration-300 ${
+              isCardHovered ? "text-bright-blue" : ""
+            }`}
+          >
+            <span className="mr-2">{company}</span>
+            <span className="mx-1 text-gray-400">•</span>
+            <span className="mr-2">{jobTitle}</span>
+            {link && (
+              <span
+                className={`transform transition-transform ${
+                  isCardHovered ? "translate-x-3" : ""
+                }`}
+              >
+                →
+              </span>
+            )}
           </div>
-        )}
-        <p>{description}</p>
+          <div className="mb-2 space-x-2">
+            {techStack.map((tech, index) => (
+              <span
+                key={index}
+                className="inline-block px-2 py-1 rounded-full bg-bright-blue bg-opacity-20 text-bright-blue hover:bg-opacity-40 text-xs"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+          <p>{description}</p>
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 
