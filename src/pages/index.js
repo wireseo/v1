@@ -84,15 +84,12 @@ const IndexPage = () => {
               description="Developed several web applications, managed databases, etc."
             />
           </ExperienceProvider>
-          <a
-            href="/Eryn_Seo_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => window.open("/Eryn_Seo_Resume.pdf", "_blank")}
+            className="no-underline transform transition-transform hover:translate-x-1 text-blue-500 hover:text-bright-blue border-b-2 border-blue-500 focus:outline-none"
           >
-            <button className="transform transition-transform hover:translate-x-1 text-blue-500 hover:text-blue-700 border-b-2 border-blue-500">
-              Download Resume →
-            </button>
-          </a>
+            Download Resume →
+          </button>
         </section>
 
         <section

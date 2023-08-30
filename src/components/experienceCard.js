@@ -17,7 +17,12 @@ const ExperienceCard = ({
   const opacity = isAnyCardHovered ? "opacity-60" : "opacity-90";
 
   return (
-    <a href={link} className="no-underline block">
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="no-underline block"
+    >
       <div
         onMouseEnter={() => {
           setIsAnyCardHovered(true);
