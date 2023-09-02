@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Personal Web Portfolio
+  Personal Web Portfolio (v1)
 </h1>
 
 ## 🚀 Quick start
