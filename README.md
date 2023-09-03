@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Minimal Starter
+  Personal Web Portfolio (v1)
 </h1>
 
 ## 🚀 Quick start
