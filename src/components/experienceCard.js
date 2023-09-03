@@ -32,7 +32,7 @@ const ExperienceCard = ({
           setIsAnyCardHovered(false);
           setCardHovered(false);
         }}
-        className={`flex items-start p-4 mb-5 rounded-xl transition-opacity transition-background-color duration-300 ${opacity} hover:opacity-100 hover:bg-[#1e293b]/[0.5] hover:drop-shadow-lg`}
+        className={`flex items-start p-4 mb-5 rounded-xl transition-all duration-300 ${opacity} hover:opacity-100 hover:bg-[#1e293b]/[0.5] hover:drop-shadow-lg`}
       >
         {/* Date part */}
         <div className="mr-10">
