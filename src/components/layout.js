@@ -4,6 +4,7 @@ import Socials from "./socials";
 import gsap from "gsap";
 import { useEffect, useState } from "react";
 import "../styles/cursorEffect.css";
+import "../styles/global.css";
 
 const Layout = ({ pageTitle, children }) => {
   const [activeTab, setActiveTab] = useState("about");
@@ -59,6 +60,24 @@ const Layout = ({ pageTitle, children }) => {
     });
   }, []);
 
+  useEffect(() => {
+    const textLayer = document.querySelector(".text-layer");
+    const orb = document.querySelector(".orb");
+
+    if (textLayer && orb) {
+      const radius = textLayer.offsetWidth / 3;
+
+      gsap.to(orb, {
+        rotation: 360,
+        x: `+=${radius}`,
+        transformOrigin: `-${radius}px center`,
+        repeat: -1, // Infinite repetition
+        duration: 5, // Duration of a full circle
+        ease: "linear",
+      });
+    }
+  }, []);
+
   return (
     <div className="bg-blue-black h-screen w-screen relative flex flex-col md:flex-row">
       <div className="cursor"></div>
@@ -72,6 +91,7 @@ const Layout = ({ pageTitle, children }) => {
         <main>
           <div className="flex flex-col pb-0 md:pb-16 p-16 relative min-w-[400px]">
             <div className="text-layer">
+              <div className="orb"></div>
               <h1 className="text-[#FFFFFF] text-6xl font-bold">Eryn Seo</h1>
               <h2 className="text-[#FFFFFF] text-xl">
                 Tech Lead at MarinaChain
