@@ -7,10 +7,10 @@ import { ExperienceProvider } from "../components/experienceProvider";
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
-      <div className="space-y-20 px-16 md:space-y-40 md:p-48">
+      <div className="space-y-20 lg:space-y-40 py-24">
         <section
           id="about"
-          className="text-[#FFFFFF]/[0.8] font-light min-w-[600px] pt-8 leading-relaxed"
+          className="text-[#FFFFFF]/[0.8] font-light min-w-[550px] leading-relaxed"
         >
           My problem-solving journey began unexpectedly when I picked up Java as
           an attempt to assist my high school principal with class scheduling. I
@@ -57,7 +57,7 @@ const IndexPage = () => {
 
         <section
           id="experience"
-          className="text-[#FFFFFF] font-light min-w-[600px] "
+          className="text-[#FFFFFF] font-light min-w-[550px]"
         >
           <ExperienceProvider>
             <ExperienceCard
@@ -94,7 +94,7 @@ const IndexPage = () => {
 
         <section
           id="projects"
-          className="text-[#FFFFFF] font-light  min-w-[600px]"
+          className="text-[#FFFFFF] font-light  min-w-[550px]"
         >
           Here is the projects{/* your projects section content */}
           and making things prettier via graphic design. I relish every
