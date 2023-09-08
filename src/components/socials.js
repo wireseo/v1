@@ -3,8 +3,10 @@ import { useState } from "react";
 import github from "../assets/icons/github-mark-white.svg";
 import linkedin from "../assets/icons/icons8-linkedin.svg";
 import email from "../assets/icons/mail-256.ico";
+import useGithubStreak from "../hooks/useGithubStreak";
+import flameIcon from "../assets/icons/flame.svg";
 
-const SocialIcon = ({ iconSrc, altText, profileLink }) => {
+const SocialIcon = ({ iconSrc, altText, profileLink, onHover, onLeave }) => {
   const openProfile = () => {
     if (profileLink.startsWith("mailto:")) {
       window.location.href = profileLink;
@@ -13,19 +15,21 @@ const SocialIcon = ({ iconSrc, altText, profileLink }) => {
     }
   };
 
-  //   TODO: Fix hover color for social icon
   return (
     <img
       src={iconSrc}
       alt={altText}
       className="w-7 h-7 lg:w-5 lg:h-5 icon cursor-pointer fill-current text-white hover:text-bright-blue transition-transform transform-gpu hover:scale-125"
       onClick={openProfile}
+      onMouseEnter={onHover}
+      onMouseLeave={onLeave}
     />
   );
 };
 
 const Socials = ({ children }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { streak, loading } = useGithubStreak("wireseo");
 
   return (
     <div
@@ -33,11 +37,24 @@ const Socials = ({ children }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <SocialIcon
-        iconSrc={github}
-        altText="GitHub"
-        profileLink="https://github.com/wireseo"
-      />
+      <div className="relative text-[#FFFFFF]">
+        <SocialIcon
+          iconSrc={github}
+          altText="GitHub"
+          profileLink="https://github.com/wireseo"
+        />
+        {!loading && (
+          <div
+            className="absolute left-full flex items-center ml-2 top-1/2 transform -translate-y-1/2"
+            onMouseEnter={(e) => e.stopPropagation()}
+            onMouseLeave={(e) => e.stopPropagation()}
+          >
+            <img src={flameIcon} alt="Streak Flame" className="w-4 h-4 mr-1" />{" "}
+            <span>{streak}</span>
+          </div>
+        )}
+      </div>
+
       <SocialIcon
         iconSrc={linkedin}
         altText="LinkedIn"
