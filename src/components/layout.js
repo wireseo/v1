@@ -83,12 +83,12 @@ const Layout = ({ pageTitle, children }) => {
                   isActive={activeTab === "experience"}
                   setActiveTab={setActiveTab}
                 />
-                <Tab
+                {/* <Tab
                   to="#projects"
                   text="projects"
                   isActive={activeTab === "projects"}
                   setActiveTab={setActiveTab}
-                />
+                /> */}
               </ul>
             </nav>
 
