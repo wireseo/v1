@@ -35,7 +35,7 @@ const ExperienceCard = ({
         className={`flex items-start p-4 mb-5 rounded-xl transition-all duration-300 ${opacity} hover:opacity-100 hover:bg-[#1e293b]/[0.5] hover:drop-shadow-lg`}
       >
         {/* Date part */}
-        <div className="mr-10">
+        <div className="mr-10 min-w-[80px]">
           <span className="block text-sm text-[#4e596b] font-medium">{`${startDate} — ${endDate}`}</span>
         </div>
 
@@ -69,7 +69,11 @@ const ExperienceCard = ({
               </span>
             ))}
           </div>
-          <p>{description}</p>
+          <ul className="list-disc pl-5 space-y-1 text-sm">
+            {description.map((desc, index) => (
+              <li key={index}>{desc}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </a>
