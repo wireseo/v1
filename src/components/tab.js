@@ -7,26 +7,46 @@ const Tab = ({ to, text, isActive, setActiveTab }) => {
 
   return (
     <li
-      className="flex items-center"
+      className="flex flex-col"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div
-        className={`mr-4 h-px ${
-          isHovered || isActive ? "w-16 bg-bright-gray" : "w-6 bg-dark-gray"
-        } transition-width duration-300 ease-in-out`}
-      ></div>
-      <button
-        className={`btn-link ${
-          isHovered || isActive ? "text-bright-gray" : "text-dark-gray"
-        }`}
-        onClick={() => {
-          scrollTo(to);
-          setActiveTab(to.slice(1));
-        }}
-      >
-        {text}
-      </button>
+      <div className="flex items-center">
+        <div
+          className={`mr-4 h-px ${
+            isHovered || isActive ? "w-16 bg-bright-gray" : "w-6 bg-dark-gray"
+          } transition-width duration-300 ease-in-out`}
+        ></div>
+        <button
+          className={`btn-link ${
+            isHovered || isActive ? "text-bright-gray" : "text-dark-gray"
+          }`}
+          onClick={() => {
+            scrollTo(to);
+            setActiveTab(to.slice(1));
+          }}
+        >
+          {text}
+        </button>
+      </div>
+
+      {text === "experience" && (
+        <div
+          className={`flex items-center mt-2 transition-transform transition-opacity transition-max-height duration-500 ease-out overflow-hidden ${
+            isActive
+              ? "opacity-100 translate-x-0 max-h-20"
+              : "opacity-0 -translate-x-4 max-h-0"
+          }`}
+        >
+          <div className={`mr-4 w-16 h-0`}></div>
+          <button
+            className="text-bright-blue text-center"
+            onClick={() => window.open("/Eryn_Seo_Resume.pdf", "_blank")}
+          >
+            Download Resume →
+          </button>
+        </div>
+      )}
     </li>
   );
 };
