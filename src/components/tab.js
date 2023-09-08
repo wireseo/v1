@@ -32,7 +32,7 @@ const Tab = ({ to, text, isActive, setActiveTab }) => {
 
       {text === "experience" && (
         <div
-          className={`flex items-center mt-2 transition-transform transition-opacity transition-max-height duration-500 ease-out overflow-hidden ${
+          className={`flex items-center mt-2 transition-transform transition-opacity transition-max-height duration-300 ease-out overflow-hidden ${
             isActive
               ? "opacity-100 translate-x-0 max-h-20"
               : "opacity-0 -translate-x-4 max-h-0"
@@ -43,7 +43,7 @@ const Tab = ({ to, text, isActive, setActiveTab }) => {
             className="text-bright-blue text-center"
             onClick={() => window.open("/Eryn_Seo_Resume.pdf", "_blank")}
           >
-            Download Resume →
+            Résumé →
           </button>
         </div>
       )}

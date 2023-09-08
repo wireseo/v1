@@ -13,3 +13,7 @@
   background: transparent;
   transition: background 0.3s;
 }
+
+.overflow-auto::-webkit-scrollbar {
+  display: none;
+}
