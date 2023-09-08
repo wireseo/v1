@@ -7,7 +7,7 @@ import { ExperienceProvider } from "../components/experienceProvider";
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
-      <div className="space-y-20 lg:space-y-40 py-24">
+      <div className="space-y-20 lg:space-y-60 py-24">
         <section
           id="about"
           className="text-[#FFFFFF]/[0.8] font-light min-w-[550px] leading-relaxed"
@@ -67,7 +67,13 @@ const IndexPage = () => {
               company="MarinaChain"
               techStack={["Vue", "Django", "PostgreSQL", "TailwindCSS"]}
               link="https://www.marinachain.io/"
-              description="Developed several web applications, managed databases, etc."
+              description={[
+                "Led a team of 4 to implement a responsive front-end for a ship analytics web platform by translating design wireframes with Vue, Pinia and Tailwind CSS.",
+                "Introduced and enforced code review practices, automated testing workflows, and continuous integration processes, resulting in a 15% reduction in production bugs and improved release cadence.",
+                "Developed internal API integrations and leveraged third-party APIs, enhancing overall system performance and reliability and data flow efficiency",
+                "Optimized the relational database schema, reducing data retrieval times by 20% and ensuring scalability to accommodate a growing number of users",
+                "Collaborated with Marketing & Design teams  in UI/UX design processes and directly engaged with clients to enhancing user engagement",
+              ]}
             />
             <ExperienceCard
               startDate="Jan 2021"
@@ -81,7 +87,11 @@ const IndexPage = () => {
                 "Salesforce",
               ]}
               link="https://www.propelsoftware.com/"
-              description="Developed several web applications, managed databases, etc."
+              description={[
+                "Implemented, tested, and deployed back-end and front-end features for large-scale enterprise web application built on Salesforce Apex connected to a Node-based server deployed on Heroku",
+                "Integrated Salesforce-based APIs and the Office365 platform to complement native Salesforce file storage which streamlined business processes, resulting in a 5% increase in product adoption",
+                "Migrated legacy React front-end to Salesforce LWC framework and refactored existing codebase to reduce item sorting and page loading time by 30%",
+              ]}
             />
           </ExperienceProvider>
           <button
@@ -92,11 +102,11 @@ const IndexPage = () => {
           </button>
         </section>
 
-        <section
+        {/* <section
           id="projects"
           className="text-[#FFFFFF] font-light  min-w-[550px]"
         >
-          Here is the projects{/* your projects section content */}
+          Here is the projects
           and making things prettier via graphic design. I relish every
           opportunity to dive into complex challenges, cherishing the process of
           creating elegant solutions that captivate users with their intuitive
@@ -118,7 +128,6 @@ const IndexPage = () => {
           relish every opportunity to dive into complex challenges, cherishing
           the process of creating elegant solutions that captivate users with
           their intuitive design and seamless experiences.Here is the projects
-          {/* your projects section content */}
           and making things prettier via graphic design. I relish every
           opportunity to dive into complex challenges, cherishing the process of
           creating elegant solutions that captivate users with their intuitive
@@ -140,7 +149,6 @@ const IndexPage = () => {
           relish every opportunity to dive into complex challenges, cherishing
           the process of creating elegant solutions that captivate users with
           their intuitive design and seamless experiences.Here is the projects
-          {/* your projects section content */}
           and making things prettier via graphic design. I relish every
           opportunity to dive into complex challenges, cherishing the process of
           creating elegant solutions that captivate users with their intuitive
@@ -162,7 +170,7 @@ const IndexPage = () => {
           relish every opportunity to dive into complex challenges, cherishing
           the process of creating elegant solutions that captivate users with
           their intuitive design and seamless experiences.
-        </section>
+        </section> */}
       </div>
     </Layout>
   );
