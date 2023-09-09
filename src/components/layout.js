@@ -1,12 +1,15 @@
 import * as React from "react";
 import Tab from "./tab";
 import Socials from "./socials";
+import WaveName from "./waveName";
+import LoadingPage from "./loadingPage";
 
 import { useEffect, useState } from "react";
 import "../styles/global.css";
 
 const Layout = ({ pageTitle, children }) => {
   const [activeTab, setActiveTab] = useState("about");
+  const [loading, setLoading] = useState(true);
 
   const handleScroll = (scrollableDiv) => {
     const about = document.getElementById("about");
@@ -23,6 +26,14 @@ const Layout = ({ pageTitle, children }) => {
       setActiveTab("projects");
     }
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const scrollableDiv = document.querySelector(".overflow-auto");
@@ -47,57 +58,67 @@ const Layout = ({ pageTitle, children }) => {
 
       const gradient = `radial-gradient(500px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 70%)`;
 
-      document.querySelector(".gradient-spot").style.background = gradient;
+      const gradientElement = document.querySelector(".gradient-spot");
+
+      if (gradientElement) {
+        gradientElement.style.background = gradient;
+      }
     });
   }, []);
 
   return (
-    <div className="bg-blue-black mx-auto min-h-screen min-w-screen px-24">
-      <div className="gradient-spot"></div>
-      <div className="lg:flex lg:justify-between lg:gap-10 lg:h-screen">
-        <div className="lg:w-1/2 lg:py-24 pt-12 lg:sticky lg:top-0">
-          <main>
-            <div className="flex flex-col pb-4 relative min-w-[300px]">
-              <div className="text-layer">
-                <h1 className="text-[#FFFFFF] text-6xl font-bold">Eryn Seo</h1>
-                <h2 className="text-[#FFFFFF] text-xl">
-                  Tech Lead at MarinaChain
-                </h2>
-                <h3 className="text-[#d7dde680] text-sm font-light">
-                  Inventive, elegant solutions for the web.
-                </h3>
-              </div>
-            </div>
+    <>
+      {loading ? (
+        <LoadingPage />
+      ) : (
+        <div className="bg-blue-black mx-auto min-h-screen min-w-screen px-24">
+          <div className="gradient-spot"></div>
+          <div className="lg:flex lg:justify-between lg:gap-10 lg:h-screen">
+            <div className="lg:w-1/2 lg:py-24 pt-12 lg:sticky lg:top-0">
+              <main>
+                <div className="flex flex-col pb-4 relative min-w-[300px]">
+                  <div className="text-layer">
+                    <WaveName />
+                    <h2 className="text-[#FFFFFF] text-xl">
+                      Tech Lead at MarinaChain
+                    </h2>
+                    <h3 className="text-[#d7dde680] text-sm font-light">
+                      Inventive, elegant solutions for the web.
+                    </h3>
+                  </div>
+                </div>
 
-            <nav className="pt-8 hidden lg:block">
-              <ul className="flex flex-col space-y-4">
-                <Tab
-                  to="#about"
-                  text="about"
-                  isActive={activeTab === "about"}
-                  setActiveTab={setActiveTab}
-                />
-                <Tab
-                  to="#experience"
-                  text="experience"
-                  isActive={activeTab === "experience"}
-                  setActiveTab={setActiveTab}
-                />
-                {/* <Tab
+                <nav className="pt-8 hidden lg:block">
+                  <ul className="flex flex-col space-y-4">
+                    <Tab
+                      to="#about"
+                      text="about"
+                      isActive={activeTab === "about"}
+                      setActiveTab={setActiveTab}
+                    />
+                    <Tab
+                      to="#experience"
+                      text="experience"
+                      isActive={activeTab === "experience"}
+                      setActiveTab={setActiveTab}
+                    />
+                    {/* <Tab
                   to="#projects"
                   text="projects"
                   isActive={activeTab === "projects"}
                   setActiveTab={setActiveTab}
                 /> */}
-              </ul>
-            </nav>
+                  </ul>
+                </nav>
 
-            <Socials />
-          </main>
+                <Socials />
+              </main>
+            </div>
+            <div className="overflow-auto lg:w-1/2">{children}</div>
+          </div>
         </div>
-        <div className="overflow-auto lg:w-1/2">{children}</div>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
