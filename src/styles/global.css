@@ -17,3 +17,9 @@
 .overflow-auto::-webkit-scrollbar {
   display: none;
 }
+
+.wave-effect {
+  max-width: 600px;
+  height: auto;
+  font-weight: bold;
+}
