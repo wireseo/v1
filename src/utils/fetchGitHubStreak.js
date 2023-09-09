@@ -31,11 +31,15 @@ const fetchGitHubStreak = async (username) => {
   const data = await response.json();
 
   let streak = 0;
+  const today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
   const weeks =
     data.data.user.contributionsCollection.contributionCalendar.weeks;
 
   for (const week of weeks.reverse()) {
     for (const day of week.contributionDays.reverse()) {
+      if (day.date === today && day.contributionCount === 0) {
+        continue; // Skip today if there's no contribution
+      }
       if (day.contributionCount > 0) {
         streak++;
       } else {
