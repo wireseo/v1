@@ -44,7 +44,7 @@ const Socials = ({ children }) => {
           profileLink="https://github.com/wireseo"
         />
         {!loading && (
-          <div className="pointer-events-none absolute left-full flex items-center ml-2 top-1/2 transform -translate-y-1/2">
+          <div className="pointer-events-none absolute left-full flex items-center ml-2 top-1/2 transform -translate-y-1/2 invisible lg:visible">
             <img src={flameIcon} alt="Streak Flame" className="w-4 h-4 mr-1" />{" "}
             <span>{streak}</span>
           </div>
