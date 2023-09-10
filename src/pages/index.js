@@ -171,6 +171,10 @@ const IndexPage = () => {
           the process of creating elegant solutions that captivate users with
           their intuitive design and seamless experiences.
         </section> */}
+
+        <section className="text-[#FFFFFF]/[0.5] font-light">
+          Built with Gatsby and Tailwind CSS. Typeface used is Roboto Slab.
+        </section>
       </div>
     </Layout>
   );
