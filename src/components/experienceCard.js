@@ -47,7 +47,7 @@ const ExperienceCard = ({
             }`}
           >
             <span className="mr-2">{company}</span>
-            <span className="mx-1 text-gray-400">•</span>
+            <span className="mx-1 text-gray-400">•&nbsp;&nbsp;</span>
             <span className="mr-2">{jobTitle}</span>
             {link && (
               <span

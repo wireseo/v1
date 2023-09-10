@@ -68,8 +68,8 @@ const IndexPage = () => {
               techStack={["Vue", "Django", "PostgreSQL", "TailwindCSS"]}
               link="https://www.marinachain.io/"
               description={[
-                "Led a team of 4 to implement a responsive front-end for a ship analytics web platform by translating design wireframes with Vue, Pinia and Tailwind CSS.",
-                "Introduced and enforced code review practices, automated testing workflows, and continuous integration processes, resulting in a 15% reduction in production bugs and improved release cadence.",
+                "Led a team of 4 to implement a responsive front-end for a ship analytics web platform by translating design wireframes with Vue, Pinia and Tailwind CSS",
+                "Introduced and enforced code review practices, automated testing workflows, and continuous integration processes, resulting in a 15% reduction in production bugs and improved release cadence",
                 "Developed internal API integrations and leveraged third-party APIs, enhancing overall system performance and reliability and data flow efficiency",
                 "Optimized the relational database schema, reducing data retrieval times by 20% and ensuring scalability to accommodate a growing number of users",
                 "Collaborated with Marketing & Design teams  in UI/UX design processes and directly engaged with clients to enhancing user engagement",
