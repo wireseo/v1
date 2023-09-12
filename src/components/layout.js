@@ -71,7 +71,7 @@ const Layout = ({ pageTitle, children }) => {
       {loading ? (
         <LoadingPage />
       ) : (
-        <div className="bg-blue-black mx-auto min-h-screen min-w-screen px-24">
+        <div className="bg-blue-black mx-auto min-h-screen max-w-screen-xl px-2 lg:px-12 xl:px-24">
           <div className="gradient-spot"></div>
           <div className="lg:flex lg:justify-between lg:gap-10 lg:h-screen">
             <div className="lg:w-1/2 lg:py-24 pt-12 lg:sticky lg:top-0">
