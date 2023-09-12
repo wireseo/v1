@@ -10,7 +10,7 @@ const IndexPage = () => {
       <div className="space-y-20 lg:space-y-60 py-24">
         <section
           id="about"
-          className="text-[#FFFFFF]/[0.8] font-light min-w-[550px] leading-relaxed"
+          className="text-[#FFFFFF]/[0.7] font-light min-w-[550px] leading-relaxed"
         >
           My problem-solving journey began unexpectedly when I picked up Java as
           an attempt to assist my high school principal with class scheduling. I
@@ -173,7 +173,7 @@ const IndexPage = () => {
         </section> */}
 
         <section className="text-[#FFFFFF]/[0.5] font-light">
-          Built with Gatsby and Tailwind CSS. Typeface used is Roboto Slab.
+          Built with Gatsby and Tailwind CSS. Roboto Slab Typeface.
         </section>
       </div>
     </Layout>
