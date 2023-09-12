@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-blue-black;
+}
+
 .gradient-spot {
   pointer-events: none;
   position: fixed;
