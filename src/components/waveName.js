@@ -40,7 +40,14 @@ const WaveName = () => {
       </defs>
 
       {/* Solid white text at the back */}
-      <text text-anchor="left" x="0" y="80" font-size="95" fill="white">
+      <text
+        text-anchor="left"
+        x="0"
+        y="80"
+        font-size="90"
+        fill="white"
+        font-weight="bold"
+      >
         Eryn Seo
       </text>
 
@@ -49,9 +56,10 @@ const WaveName = () => {
         text-anchor="left"
         x="0"
         y="80"
-        font-size="95"
+        font-size="90"
         fill="url(#wave)"
         fill-opacity="0.8"
+        font-weight="bold"
       >
         Eryn Seo
       </text>

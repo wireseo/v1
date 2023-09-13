@@ -10,7 +10,7 @@ const IndexPage = () => {
       <div className="space-y-20 lg:space-y-60 py-24">
         <section
           id="about"
-          className="text-[#FFFFFF]/[0.7] font-light leading-relaxed"
+          className="text-[#FFFFFF]/50 font-light leading-relaxed"
         >
           <p>
             My problem-solving journey began unexpectedly when I picked up Java
