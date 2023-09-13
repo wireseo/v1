@@ -17,6 +17,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-preload-fonts`,
     {
       resolve: "gatsby-plugin-manifest",
       options: {

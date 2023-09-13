@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   content: [
     "./src/pages/**/*.{js,jsx,ts,tsx}",
     "./src/components/**/*.{js,jsx,ts,tsx}",
@@ -14,7 +15,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Roboto Slab", "Roboto", "Manrope"],
+        sans: ["Roboto Slab", "sans"],
       },
     },
   },
