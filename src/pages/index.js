@@ -7,7 +7,7 @@ import { ExperienceProvider } from "../components/experienceProvider";
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
-      <div className="space-y-20 lg:space-y-60 py-24">
+      <div className="space-y-20 lg:space-y-60 py-32">
         <section
           id="about"
           className="text-[#FFFFFF]/50 font-light leading-relaxed"
