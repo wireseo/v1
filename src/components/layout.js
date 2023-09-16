@@ -38,15 +38,13 @@ const Layout = ({ pageTitle, children }) => {
   useEffect(() => {
     const scrollableDiv = document.querySelector(".overflow-auto");
 
+    const onScroll = () => handleScroll(scrollableDiv);
+
     if (scrollableDiv) {
-      scrollableDiv.addEventListener("scroll", () =>
-        handleScroll(scrollableDiv)
-      );
+      scrollableDiv.addEventListener("scroll", onScroll);
 
       return () => {
-        scrollableDiv.removeEventListener("scroll", () =>
-          handleScroll(scrollableDiv)
-        );
+        scrollableDiv.removeEventListener("scroll", onScroll);
       };
     }
   }, []);
