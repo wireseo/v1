@@ -40,7 +40,7 @@ const Tab = ({ to, text, isActive, setActiveTab }) => {
         >
           <div className={`mr-4 w-16 h-0`}></div>
           <button
-            className="text-bright-blue text-center"
+            className="text-bright-blue no-underline transform transition-transform hover:translate-x-1 hover:text-bright-blue focus:outline-none"
             onClick={() => window.open("/Eryn_Seo_Resume.pdf", "_blank")}
           >
             Résumé →
