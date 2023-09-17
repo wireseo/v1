@@ -3,138 +3,138 @@ import "../styles/loadingPage.css";
 
 const LoadingPage = () => (
   <div className="hello-parent min-h-screen min-w-screen">
-    <svg class="hello-word" width="365" height="365" viewBox="0 0 365 365">
+    <svg className="hello-word" width="365" height="365" viewBox="0 0 365 365">
       <g id="H-letter">
         <line
-          class="H-left-stroke"
+          className="H-left-stroke"
           x1="17"
           y1="0"
           x2="17"
           y2="124"
           stroke="#FFF"
           fill="none"
-          stroke-width="34"
+          strokeWidth="34"
         />
         <line
-          class="H-mid-stroke"
+          className="H-mid-stroke"
           x1="33"
           y1="62"
           x2="68"
           y2="62"
           stroke="#FFF"
           fill="none"
-          stroke-width="34"
+          strokeWidth="34"
         />
         <line
-          class="H-right-stroke"
+          className="H-right-stroke"
           x1="84"
           y1="0"
           x2="84"
           y2="124"
           stroke="#FFF"
           fill="none"
-          stroke-width="34"
+          strokeWidth="34"
         />
       </g>
 
       <g id="E-letter">
         <line
-          class="E-left-stroke"
+          className="E-left-stroke"
           x1="138"
           y1="0"
           x2="138"
           y2="124"
           stroke="#FFF"
           fill="none"
-          stroke-width="34"
+          strokeWidth="34"
         />
         <line
-          class="E-top-stroke"
+          className="E-top-stroke"
           x1="154"
           y1="17"
           x2="201"
           y2="17"
           stroke="#FFF"
           fill="none"
-          stroke-width="34"
+          strokeWidth="34"
         />
         <line
-          class="E-mid-stroke"
+          className="E-mid-stroke"
           x1="154"
           y1="62"
           x2="196"
           y2="62"
           stroke="#FFF"
           fill="none"
-          stroke-width="34"
+          strokeWidth="34"
         />
         <line
-          class="E-bottom-stroke"
+          className="E-bottom-stroke"
           x1="154"
           y1="107"
           x2="201"
           y2="107"
           stroke="#FFF"
           fill="none"
-          stroke-width="34"
+          strokeWidth="34"
         />
       </g>
 
       <g id="L-one-letter">
         <line
-          class="L-one-long-stroke"
+          className="L-one-long-stroke"
           x1="17"
           y1="153"
           x2="17"
           y2="277"
           stroke="#FFF"
           fill="none"
-          stroke-width="34"
+          strokeWidth="34"
         />
         <line
-          class="L-one-short-stroke"
+          className="L-one-short-stroke"
           x1="33"
           y1="260"
           x2="77"
           y2="260"
           stroke="#FFF"
           fill="none"
-          stroke-width="34"
+          strokeWidth="34"
         />
       </g>
 
       <g id="L-two-letter">
         <line
-          class="L-two-long-stroke"
+          className="L-two-long-stroke"
           x1="104"
           y1="153"
           x2="104"
           y2="277"
           stroke="#FFF"
           fill="none"
-          stroke-width="34"
+          strokeWidth="34"
         />
         <line
-          class="L-two-short-stroke"
+          className="L-two-short-stroke"
           x1="120"
           y1="260"
           x2="164"
           y2="260"
           stroke="#FFF"
           fill="none"
-          stroke-width="34"
+          strokeWidth="34"
         />
       </g>
 
       <g id="O-letter">
         <circle
-          class="O-stroke"
+          className="O-stroke"
           cx="231"
           cy="215"
           r="48"
           stroke="#FFF"
           fill="none"
-          stroke-width="31"
+          strokeWidth="31"
         />
       </g>
 
@@ -145,7 +145,7 @@ const LoadingPage = () => (
           x2="325"
           y2="260"
           stroke="#38bdf8"
-          class="red-dot"
+          className="red-dot"
         />
       </g>
     </svg>

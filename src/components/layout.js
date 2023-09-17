@@ -12,7 +12,6 @@ const Layout = ({ pageTitle, children }) => {
   const [loading, setLoading] = useState(true);
 
   const handleScroll = (scrollableDiv) => {
-    console.log("scrolled");
     const about = document.getElementById("about");
     const experience = document.getElementById("experience");
 

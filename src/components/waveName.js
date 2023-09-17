@@ -6,13 +6,13 @@ const WaveName = () => {
       width="520"
       viewBox="0 0 800 100"
       xmlns="http://www.w3.org/2000/svg"
-      shape-rendering="geometricPrecision"
-      text-rendering="optimizeLegibility"
+      shapeRendering="geometricPrecision"
+      textRendering="optimizeLegibility"
     >
       <defs>
         <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="5%" stop-color="#38bdf8" />
-          <stop offset="95%" stop-color="#123752" />
+          <stop offset="5%" stopColor="#38bdf8" />
+          <stop offset="95%" stopColor="#123752" />
         </linearGradient>
         <pattern
           id="wave"
@@ -41,25 +41,25 @@ const WaveName = () => {
 
       {/* Solid white text at the back */}
       <text
-        text-anchor="left"
+        textAnchor="left"
         x="0"
         y="80"
-        font-size="90"
+        fontSize="90"
         fill="white"
-        font-weight="bold"
+        fontWeight="bold"
       >
         Eryn Seo
       </text>
 
       {/* Wave effect text on top */}
       <text
-        text-anchor="left"
+        textAnchor="left"
         x="0"
         y="80"
-        font-size="90"
+        fontSize="90"
         fill="url(#wave)"
-        fill-opacity="0.8"
-        font-weight="bold"
+        fillOpacity="0.8"
+        fontWeight="bold"
       >
         Eryn Seo
       </text>
