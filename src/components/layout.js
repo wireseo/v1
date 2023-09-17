@@ -12,6 +12,7 @@ const Layout = ({ pageTitle, children }) => {
   const [loading, setLoading] = useState(true);
 
   const handleScroll = (scrollableDiv) => {
+    console.log("scrolled");
     const about = document.getElementById("about");
     const experience = document.getElementById("experience");
 
@@ -36,18 +37,20 @@ const Layout = ({ pageTitle, children }) => {
   }, []);
 
   useEffect(() => {
-    const scrollableDiv = document.querySelector(".overflow-auto");
+    if (!loading) {
+      const scrollableDiv = document.querySelector(".overflow-auto");
 
-    const onScroll = () => handleScroll(scrollableDiv);
+      const onScroll = () => handleScroll(scrollableDiv);
 
-    if (scrollableDiv) {
-      scrollableDiv.addEventListener("scroll", onScroll);
+      if (scrollableDiv) {
+        scrollableDiv.addEventListener("scroll", onScroll);
 
-      return () => {
-        scrollableDiv.removeEventListener("scroll", onScroll);
-      };
+        return () => {
+          scrollableDiv.removeEventListener("scroll", onScroll);
+        };
+      }
     }
-  }, []);
+  }, [loading]);
 
   useEffect(() => {
     document.addEventListener("mousemove", (e) => {
