@@ -7,6 +7,11 @@
   Personal Web Portfolio (v1)
 </h1>
 
+## ✨ Introduction
+
+Welcome to my personal web portfolio. This site is built with Gatsby React. Dive in to explore!
+You can check out this web portfolio by accessing erynseo.gatsbyjs.io.
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
