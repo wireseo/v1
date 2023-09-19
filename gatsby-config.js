@@ -24,5 +24,6 @@ module.exports = {
         icon: "src/assets/favicon_io/wave.png",
       },
     },
+    "gatsby-plugin-typescript",
   ],
 };

@@ -2,7 +2,14 @@ import * as React from "react";
 import { useState } from "react";
 import scrollTo from "gatsby-plugin-smoothscroll";
 
-const Tab = ({ to, text, isActive, setActiveTab }) => {
+type TabProps = {
+  to: string;
+  text: string;
+  isActive: boolean;
+  setActiveTab: (tabName: string) => void;
+};
+
+const Tab: React.FC<TabProps> = ({ to, text, isActive, setActiveTab }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (

@@ -46,9 +46,11 @@ const ExperienceCard = ({
               isCardHovered ? "text-bright-blue" : ""
             }`}
           >
-            <span className="mr-2">{company}</span>
-            <span className="mx-1 text-gray-400">•&nbsp;&nbsp;</span>
-            <span className="mr-2">{jobTitle}</span>
+            <div className="flex mr-2">
+              <span>{company}</span>
+              <span className="mx-1 text-gray-400">•&nbsp;&nbsp;</span>
+              <span>{jobTitle}</span>
+            </div>
             {link && (
               <span
                 className={`transform transition-transform ${
