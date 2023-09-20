@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Personal Web Portfolio (v1)
+  Eryn's Web Portfolio (v1)
 </h1>
 
 ## ✨ Introduction
