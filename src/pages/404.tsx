@@ -1,23 +1,23 @@
 import * as React from "react";
 import { Link } from "gatsby";
 
-const pageStyles = {
+const pageStyles: React.CSSProperties = {
   color: "#232129",
   padding: "96px",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 };
 
-const headingStyles = {
+const headingStyles: React.CSSProperties = {
   marginTop: 0,
   marginBottom: 64,
   maxWidth: 320,
 };
 
-const paragraphStyles = {
+const paragraphStyles: React.CSSProperties = {
   marginBottom: 48,
 };
 
-const codeStyles = {
+const codeStyles: React.CSSProperties = {
   color: "#8A6534",
   padding: 4,
   backgroundColor: "#FFF4DB",
@@ -25,7 +25,7 @@ const codeStyles = {
   borderRadius: 4,
 };
 
-const NotFoundPage = () => {
+const NotFoundPage: React.FC = () => {
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>Page not found</h1>
@@ -48,4 +48,4 @@ const NotFoundPage = () => {
 
 export default NotFoundPage;
 
-export const Head = () => <title>Not found</title>;
+export const Head: React.FC = () => <title>Not found</title>;
