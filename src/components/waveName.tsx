@@ -1,6 +1,6 @@
 import React from "react";
 
-const WaveName = () => {
+const WaveName: React.FC = () => {
   return (
     <svg
       width="520"
