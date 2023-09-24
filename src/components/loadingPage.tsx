@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/loadingPage.css";
 
-const LoadingPage = () => (
+const LoadingPage: React.FC = () => (
   <div className="hello-parent min-h-screen min-w-screen">
     <svg className="hello-word" width="365" height="365" viewBox="0 0 365 365">
       <g id="H-letter">
