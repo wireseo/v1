@@ -6,7 +6,21 @@ import email from "../assets/icons/mail-256.ico";
 import useGithubStreak from "../hooks/useGithubStreak";
 import flameIcon from "../assets/icons/flame.svg";
 
-const SocialIcon = ({ iconSrc, altText, profileLink, onHover, onLeave }) => {
+interface SocialIconProps {
+  iconSrc: string;
+  altText: string;
+  profileLink: string;
+  onHover?: () => void;
+  onLeave?: () => void;
+}
+
+const SocialIcon: React.FC<SocialIconProps> = ({
+  iconSrc,
+  altText,
+  profileLink,
+  onHover,
+  onLeave,
+}) => {
   const openProfile = () => {
     if (profileLink.startsWith("mailto:")) {
       window.location.href = profileLink;
@@ -27,9 +41,14 @@ const SocialIcon = ({ iconSrc, altText, profileLink, onHover, onLeave }) => {
   );
 };
 
-const Socials = ({ children }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const { streak, loading } = useGithubStreak("wireseo");
+interface GithubStreak {
+  streak: number;
+  loading: boolean;
+}
+
+const Socials: React.FC = ({ children }) => {
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const { streak, loading }: GithubStreak = useGithubStreak("wireseo");
 
   return (
     <div
