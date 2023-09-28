@@ -9,8 +9,7 @@
 
 ## ✨ Introduction
 
-Welcome to my personal web portfolio. This site is built with Gatsby React. Dive in to explore!
-You can check out this web portfolio by accessing erynseo.gatsbyjs.io.
+Welcome to my personal web portfolio. This site is built with Gatsby React & hosted on Netlify. You can check out this web portfolio by accessing erynseo.gatsbyjs.io.
 
 ## 🚀 Quick start
 
