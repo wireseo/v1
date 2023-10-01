@@ -5,8 +5,9 @@ interface ExperienceContextProps {
   setIsAnyCardHovered: (hovered: boolean) => void;
 }
 
-const ExperienceContext =
-  (createContext < ExperienceContextProps) | (undefined > undefined);
+const ExperienceContext = createContext<ExperienceContextProps | undefined>(
+  undefined
+);
 
 interface ExperienceProviderProps {
   children: ReactNode;

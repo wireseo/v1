@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useExperienceContext } from "./experienceProvider";
-import { useState } from "react";
 
-const ExperienceCard = ({
+interface ExperienceCardProps {
+  startDate: string;
+  endDate: string;
+  jobTitle: string;
+  company: string;
+  techStack: string[];
+  link?: string;
+  description: string[];
+}
+
+const ExperienceCard: React.FC<ExperienceCardProps> = ({
   startDate,
   endDate,
   jobTitle,
