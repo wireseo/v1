@@ -184,4 +184,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <Seo title="Eryn Seo" />;
+export const Head = () => <Seo title="Eryn Seo's Web Portfolio" />;
