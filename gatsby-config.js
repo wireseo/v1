@@ -25,5 +25,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-typescript",
+    "gatsby-adapter-netlify",
   ],
 };
