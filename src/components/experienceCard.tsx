@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useExperienceContext } from "./experienceProvider";
 
-interface ExperienceCardProps {
+export interface ExperienceCardProps {
   startDate: string;
   endDate: string;
   jobTitle: string;

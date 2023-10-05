@@ -1,10 +1,12 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import ExperienceCard from "../components/experienceCard";
+import ExperienceCard, {
+  ExperienceCardProps,
+} from "../components/experienceCard";
 import { ExperienceProvider } from "../components/experienceProvider";
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
   return (
     <Layout pageTitle="Home Page">
       <div className="space-y-20 lg:space-y-60 py-32">
@@ -184,4 +186,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <Seo title="Eryn Seo's Web Portfolio" />;
+export const Head: React.FC = () => <Seo title="Eryn Seo's Web Portfolio" />;

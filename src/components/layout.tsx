@@ -4,16 +4,18 @@ import Socials from "./socials";
 import WaveName from "./waveName";
 import LoadingPage from "./loadingPage";
 
-import { useEffect, useState } from "react";
-import "../styles/global.css";
+const Layout: React.FC<{
+  pageTitle: string;
+  children: React.ReactNode;
+}> = ({ pageTitle, children }) => {
+  const [activeTab, setActiveTab] = React.useState<string>("about");
+  const [loading, setLoading] = React.useState<boolean>(true);
 
-const Layout = ({ pageTitle, children }) => {
-  const [activeTab, setActiveTab] = useState("about");
-  const [loading, setLoading] = useState(true);
-
-  const handleScroll = (scrollableDiv) => {
+  const handleScroll = (scrollableDiv: Element) => {
     const about = document.getElementById("about");
     const experience = document.getElementById("experience");
+
+    if (!about || !experience) return;
 
     if (scrollableDiv.scrollTop < about.offsetHeight) {
       setActiveTab("about");
@@ -27,7 +29,7 @@ const Layout = ({ pageTitle, children }) => {
     }
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2500);
@@ -35,11 +37,11 @@ const Layout = ({ pageTitle, children }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (!loading) {
       const scrollableDiv = document.querySelector(".overflow-auto");
 
-      const onScroll = () => handleScroll(scrollableDiv);
+      const onScroll = () => handleScroll(scrollableDiv!);
 
       if (scrollableDiv) {
         scrollableDiv.addEventListener("scroll", onScroll);
@@ -51,8 +53,8 @@ const Layout = ({ pageTitle, children }) => {
     }
   }, [loading]);
 
-  useEffect(() => {
-    document.addEventListener("mousemove", (e) => {
+  React.useEffect(() => {
+    document.addEventListener("mousemove", (e: MouseEvent) => {
       const x = e.clientX;
       const y = e.clientY;
 
