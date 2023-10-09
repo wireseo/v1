@@ -1,6 +1,30 @@
+type ContributionDay = {
+  contributionCount: number;
+  date: string;
+};
+
+type Week = {
+  contributionDays: ContributionDay[];
+};
+
+type ContributionCalendar = {
+  totalContributions: number;
+  weeks: Week[];
+};
+
+type GitHubResponse = {
+  data: {
+    user: {
+      contributionsCollection: {
+        contributionCalendar: ContributionCalendar;
+      };
+    };
+  };
+};
+
 const GITHUB_API = "https://api.github.com/graphql";
 
-const fetchGitHubStreak = async (username) => {
+const fetchGitHubStreak = async (username: string): Promise<number> => {
   const query = `
     {
       user(login: "${username}") {
@@ -28,7 +52,7 @@ const fetchGitHubStreak = async (username) => {
     body: JSON.stringify({ query }),
   });
 
-  const data = await response.json();
+  const data: GitHubResponse = await response.json();
 
   let streak = 0;
   const today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
