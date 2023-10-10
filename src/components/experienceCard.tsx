@@ -63,7 +63,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
             {link && (
               <span
                 className={`transform transition-transform ${
-                  isCardHovered ? "translate-x-3" : ""
+                  isCardHovered ? "translate-x-2" : ""
                 }`}
               >
                 →
