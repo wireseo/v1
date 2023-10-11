@@ -177,7 +177,7 @@ const IndexPage: React.FC = () => {
         </section> */}
 
         <section className="text-[#FFFFFF]/[0.5] font-light text-sm">
-          Built with Gatsby and Tailwind CSS. Roboto Slab Typeface.
+          Built w/ ❤️ in Gatsby and Tailwind CSS. Roboto Slab Typeface.
         </section>
       </div>
     </Layout>
