@@ -39,16 +39,16 @@ const Tab: React.FC<TabProps> = ({ to, text, isActive, setActiveTab }) => {
 
       {text === "experience" && (
         <div
-          className={`flex items-center mt-2 transition-transform transition-opacity transition-max-height duration-300 ease-out overflow-hidden ${
+          className={`flex items-center transition-transform transition-opacity transition-max-height duration-300 ease-out overflow-hidden ${
             isActive
-              ? "opacity-100 translate-x-0 max-h-20"
+              ? "opacity-100 translate-x-0 max-h-20 mt-2"
               : "opacity-0 -translate-x-4 max-h-0"
           }`}
         >
           <div className={`mr-4 w-16 h-0`}></div>
           <button
             className="text-bright-blue no-underline transform transition-transform hover:translate-x-1 hover:text-bright-blue focus:outline-none"
-            onClick={() => window.open("/Eryn_Seo_Resume.pdf", "_blank")}
+            onClick={() => window.open("/Eryn_Seo_Resume_2023.pdf", "_blank")}
           >
             Résumé →
           </button>

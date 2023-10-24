@@ -1,8 +1,8 @@
 import * as React from "react";
-import Tab from "./tab";
-import Socials from "./socials";
-import WaveName from "./waveName";
-import LoadingPage from "./loadingPage";
+import Tab from "./Tab";
+import Socials from "./Socials";
+import WaveName from "./WaveName";
+import LoadingPage from "./LoadingPage";
 
 const Layout: React.FC<{
   pageTitle: string;
@@ -104,12 +104,12 @@ const Layout: React.FC<{
                       isActive={activeTab === "experience"}
                       setActiveTab={setActiveTab}
                     />
-                    {/* <Tab
-                  to="#projects"
-                  text="projects"
-                  isActive={activeTab === "projects"}
-                  setActiveTab={setActiveTab}
-                /> */}
+                    <Tab
+                      to="#projects"
+                      text="projects"
+                      isActive={activeTab === "projects"}
+                      setActiveTab={setActiveTab}
+                    />
                   </ul>
                 </nav>
 
