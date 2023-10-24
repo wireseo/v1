@@ -9,22 +9,22 @@ import { ExperienceProvider } from "../components/experienceProvider";
 const IndexPage: React.FC = () => {
   return (
     <Layout pageTitle="Home Page">
-      <div className="space-y-20 lg:space-y-60 py-32">
+      <div className="space-y-20 lg:space-y-40 py-32">
         <section
           id="about"
-          className="text-main-text font-light leading-relaxed"
+          className="text-blue-white/[0.8] tracking-wider font-mono leading-relaxed"
         >
           <p>
-            I'm a seasoned full-stack engineer specializing in driving
-            innovative projects from inception to launch. On top of implementing
-            technical solutions, I consistently collaborate with external
-            stakeholders and clients as a tech lead.{" "}
+            <strong className="text-bright-blue opacity-80 hover:opacity-100 transition-opacity duration-300">
+              Hey there!
+            </strong>{" "}
+            I'm Eryn, a seasoned full-stack engineer specializing in
+            spearheading innovative projects from inception to launch.
           </p>
           <br />
           <p>
-            Riding the entrepreneurial wave since secondary school, I've
-            ventured into the dynamic realm of startups, from the buzzing
-            landscape of{" "}
+            Riding the entrepreneurial wave since secondary school, I've surfed
+            all the way from the bustling breakers of{" "}
             <strong>
               <a
                 href="https://www.propelsoftware.com/"
@@ -33,22 +33,25 @@ const IndexPage: React.FC = () => {
                 Silicon Valley{" "}
               </a>
             </strong>
-            to the vibrant startup scene in{" "}
+            to the vibrant shores of{" "}
             <strong>
               <a
                 href="https://www.marinachain.io/"
                 className="text-bright-blue opacity-80 hover:opacity-100 transition-opacity duration-300"
               >
-                Singapore's maritime industry.
+                Singapore
               </a>
             </strong>
+            's maritime startup scene.{" "}
+            <span className="text-blue-white/[0.5] text-sm">
+              (In a metaphorical sense, of course.)
+            </span>
           </p>
           <p>
             <br />
-            Currently, I’m with MarinaChain, shaping intuitive front-end
-            interfaces and optimizing robust backends for a diverse range of B2B
-            products centered on maritime decarbonization. Off the clock, I am a
-            tinkerer at heart: you can find me writing{" "}
+            Currently, I build solutions and lead technical teams for a diverse
+            range of SaaS B2B products focusing on maritime decarbonization. Off
+            the clock, I am a tinkerer at heart: you can find me writing cool{" "}
             <strong>
               <a
                 href="https://open.spotify.com/artist/0w1g0B53ZzbTkbev0WDAmm?si=BMuVaWz-TZWUe0c7QdW32A"
@@ -57,49 +60,38 @@ const IndexPage: React.FC = () => {
                 indie music
               </a>
             </strong>{" "}
-            and making things prettier via graphic design.
+            and making lovable things even lovelier via graphic design.
           </p>
         </section>
 
-        <section id="experience" className="text-[#FFFFFF] font-light">
+        <section id="experience">
           <ExperienceProvider>
             <ExperienceCard
-              startDate="Sep 2022"
+              startDate="2022"
               endDate="Present"
               jobTitle="Tech Lead"
               company="MarinaChain"
               techStack={["Vue", "Django", "PostgreSQL", "TailwindCSS"]}
               link="https://www.marinachain.io/"
-              description={[
-                "Led a team of 4 to implement a responsive front-end for a ship analytics web platform by translating design wireframes with Vue, Pinia and Tailwind CSS",
-                "Introduced and enforced code review practices, automated testing workflows, and continuous integration processes, resulting in a 15% reduction in production bugs and improved release cadence",
-                "Developed internal API integrations and leveraged third-party APIs, enhancing overall system performance and reliability and data flow efficiency",
-                "Optimized the relational database schema, reducing data retrieval times by 20% and ensuring scalability to accommodate a growing number of users",
-                "Collaborated with Marketing & Design teams  in UI/UX design processes and directly engaged with clients to enhancing user engagement",
-              ]}
+              description={
+                "Delivered robust production code in creating a responsive frontend and optimized backend for a ship analytics / carbon accounting platform. Implemented best practices and CI/CD pipelines while providing leadership."
+              }
             />
             <ExperienceCard
-              startDate="Jan 2021"
+              startDate="Jan"
               endDate="Dec 2021"
               jobTitle="Software Engineer Intern"
               company="Propel Software"
-              techStack={[
-                "Javascript",
-                "Apex (Java)",
-                "Lightning Web Components",
-                "Salesforce",
-              ]}
+              techStack={["Javascript", "Apex (Java)", "LWC", "Salesforce"]}
               link="https://www.propelsoftware.com/"
-              description={[
-                "Implemented, tested, and deployed back-end and front-end features for large-scale enterprise web application built on Salesforce Apex connected to a Node-based server deployed on Heroku",
-                "Integrated Salesforce-based APIs and the Office365 platform to complement native Salesforce file storage which streamlined business processes, resulting in a 5% increase in product adoption",
-                "Migrated legacy React front-end to Salesforce LWC framework and refactored existing codebase to reduce item sorting and page loading time by 30%",
-              ]}
+              description={
+                "Integrated a large-scale enterprise web application based on Salesforce and Office365 to optimize business processes. Spearheaded a migration from a legacy React frontend to Salesforce LWC, streamlining performance and reducing load times significantly."
+              }
             />
           </ExperienceProvider>
           <button
             onClick={() => window.open("/Eryn_Seo_Resume.pdf", "_blank")}
-            className="no-underline transform transition-transform hover:translate-x-1 text-blue-500 hover:text-bright-blue border-b-2 border-blue-500 focus:outline-none"
+            className="text-blue-white ransform transition-transform hover:translate-x-1 text-blue-500 hover:text-bright-blue border-b-2 border-blue-500 focus:outline-none"
           >
             Download Resume →
           </button>
@@ -107,7 +99,7 @@ const IndexPage: React.FC = () => {
 
         {/* <section
           id="projects"
-          className="text-[#FFFFFF] font-light  min-w-[550px]"
+          className="text-blue-white font-light min-w-[550px]"
         >
           Here is the projects
           and making things prettier via graphic design. I relish every
@@ -174,10 +166,6 @@ const IndexPage: React.FC = () => {
           the process of creating elegant solutions that captivate users with
           their intuitive design and seamless experiences.
         </section> */}
-
-        <section className="text-[#FFFFFF]/[0.5] font-light text-sm">
-          Built w/ ❤️ in Gatsby and Tailwind CSS. Roboto Slab Typeface.
-        </section>
       </div>
     </Layout>
   );

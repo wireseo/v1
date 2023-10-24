@@ -8,7 +8,7 @@ export interface ExperienceCardProps {
   company: string;
   techStack: string[];
   link?: string;
-  description: string[];
+  description: string;
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({
@@ -44,8 +44,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         className={`flex items-start p-4 mb-5 rounded-xl transition-all duration-300 ${opacity} hover:opacity-100 hover:bg-[#1e293b]/[0.5] hover:drop-shadow-lg`}
       >
         {/* Date part */}
-        <div className="mr-10 min-w-[80px]">
-          <span className="block text-sm text-[#4e596b] font-medium">{`${startDate} — ${endDate}`}</span>
+        <div className="mr-5 min-w-[105px]">
+          <span className="block w-full text-sm text-[#4e596b] font-medium">{`${startDate} — ${endDate}`}</span>
         </div>
 
         {/* Main card */}
@@ -55,10 +55,12 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
               isCardHovered ? "text-bright-blue" : ""
             }`}
           >
-            <div className="flex mr-2">
-              <span>{company}</span>
-              <span className="mx-1 text-gray-400">•&nbsp;&nbsp;</span>
-              <span>{jobTitle}</span>
+            <div className="flex mr-2 text-blue-white">
+              <span className="hover:text-bright-blue font-mono font-medium tracking-wide">
+                {company}
+              </span>
+              <span className="mx-1 text-gray-400">&nbsp;•&nbsp;</span>
+              <span className="font-mono font-medium">{jobTitle}</span>
             </div>
             {link && (
               <span
@@ -80,10 +82,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
               </span>
             ))}
           </div>
-          <ul className="list-disc pl-5 space-y-1 text-sm leading-relaxed">
-            {description.map((desc, index) => (
-              <li key={index}>{desc}</li>
-            ))}
+          <ul className="mt-3 list-disc leading-relaxed text-[15px] tracking-wide font-normal font-mono text-blue-white/[0.8] space-y-3">
+            {description}
           </ul>
         </div>
       </div>
