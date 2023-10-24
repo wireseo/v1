@@ -52,11 +52,11 @@ const Socials: React.FC = ({ children }) => {
 
   return (
     <div
-      className="flex items-center space-x-5 lg:flex-col lg:ml-0 lg:space-x-0 lg:space-y-3 lg:absolute lg:bottom-0 lg:left-0"
+      className="flex items-center space-x-5 lg:flex-col lg:ml-8 lg:space-x-0 lg:space-y-3 lg:absolute lg:bottom-0 lg:left-0"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative text-[#FFFFFF]">
+      <div className="relative text-blue-white">
         <SocialIcon
           iconSrc={github}
           altText="GitHub"
