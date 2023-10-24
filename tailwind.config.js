@@ -11,11 +11,12 @@ module.exports = {
       "bright-blue": "#38bdf8",
       "bright-gray": "#e2e8f0",
       "dark-gray": "#64748b",
-      "main-text": "hsl(220, 30%, 90%)",
+      "blue-white": "hsl(220, 30%, 90%)",
     },
     extend: {
       fontFamily: {
         sans: ["Roboto Slab", "sans"],
+        mono: ["Neue Montreal", "monospace"],
       },
     },
   },
