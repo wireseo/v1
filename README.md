@@ -9,7 +9,7 @@
 
 ## ✨ Introduction
 
-This site is built with Gatsby React and hosted on Netlify. You can check out this web portfolio by accessing erynseo.gatsbyjs.io.
+This site is built with Gatsby React and hosted on Netlify. You can check out this web portfolio by accessing the following link: https://erynseo.netlify.app/
 
 ## 🚀 Quick start (Netlify)
 
