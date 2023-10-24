@@ -15,7 +15,7 @@ const IndexPage: React.FC = () => {
           className="text-blue-white/[0.8] tracking-wider font-mono leading-relaxed"
         >
           <p>
-            <strong className="text-bright-blue opacity-80 hover:opacity-100 transition-opacity duration-300">
+            <strong className="font-medium text-bright-blue opacity-80 hover:opacity-100 transition-opacity duration-300">
               Hey there!
             </strong>{" "}
             I'm Eryn, a seasoned full-stack engineer specializing in
@@ -28,7 +28,7 @@ const IndexPage: React.FC = () => {
             <strong>
               <a
                 href="https://www.propelsoftware.com/"
-                className="text-bright-blue opacity-80 hover:opacity-100 transition-opacity duration-300"
+                className="font-medium text-bright-blue opacity-80 hover:opacity-100 transition-opacity duration-300"
               >
                 Silicon Valley{" "}
               </a>
@@ -37,7 +37,7 @@ const IndexPage: React.FC = () => {
             <strong>
               <a
                 href="https://www.marinachain.io/"
-                className="text-bright-blue opacity-80 hover:opacity-100 transition-opacity duration-300"
+                className="font-medium text-bright-blue opacity-80 hover:opacity-100 transition-opacity duration-300"
               >
                 Singapore
               </a>
@@ -55,7 +55,7 @@ const IndexPage: React.FC = () => {
             <strong>
               <a
                 href="https://open.spotify.com/artist/0w1g0B53ZzbTkbev0WDAmm?si=BMuVaWz-TZWUe0c7QdW32A"
-                className="text-bright-blue opacity-80 hover:opacity-100 transition-opacity duration-300"
+                className="font-medium text-bright-blue opacity-80 hover:opacity-100 transition-opacity duration-300"
               >
                 indie music
               </a>

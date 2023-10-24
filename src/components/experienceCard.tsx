@@ -55,8 +55,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
               isCardHovered ? "text-bright-blue" : ""
             }`}
           >
-            <div className="flex mr-2 text-blue-white">
-              <span className="hover:text-bright-blue font-mono font-medium tracking-wide">
+            <div className="flex mr-2 text-blue-white hover:text-bright-blue">
+              <span className=" font-mono font-medium tracking-wide">
                 {company}
               </span>
               <span className="mx-1 text-gray-400">&nbsp;•&nbsp;</span>
@@ -65,7 +65,9 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
             {link && (
               <span
                 className={`transform transition-transform ${
-                  isCardHovered ? "translate-x-2" : ""
+                  isCardHovered
+                    ? "translate-x-2 text-bright-blue"
+                    : "text-blue-white "
                 }`}
               >
                 →
