@@ -70,62 +70,67 @@ const Layout: React.FC<{
 
   return (
     <>
-      {loading ? (
+      <div
+        className={
+          loading
+            ? "fixed top-0 left-0 w-full h-full z-50 transform transition-transform duration-1000 ease-in-out"
+            : "fixed top-0 left-0 w-full h-full z-50 transform transition-transform duration-1000 ease-in-out -translate-y-full"
+        }
+      >
         <LoadingPage />
-      ) : (
-        <div className="bg-blue-black mx-auto min-h-screen max-w-screen-xl px-8 lg:px-12">
-          <div className="gradient-spot"></div>
-          <div className="lg:flex lg:justify-between lg:h-screen lg:gap-8">
-            <div className="lg:w-2/5 lg:py-24 pt-12 lg:pl-8 lg:sticky lg:top-0 ">
-              <main>
-                <div className="flex flex-col pb-4 relative min-w-[300px]">
-                  <div className="text-layer">
-                    <WaveName />
-                    <h2 className="text-blue-white text-xl">
-                      Tech Lead at MarinaChain
-                    </h2>
-                    <h3 className="text-blue-white/[0.8] font-mono text-[15.5px]">
-                      Inventive, elegant solutions for the web.
-                    </h3>
-                  </div>
+      </div>
+      <div className="bg-blue-black mx-auto min-h-screen max-w-screen-xl px-8 lg:px-12">
+        <div className="gradient-spot"></div>
+        <div className="lg:flex lg:justify-between lg:h-screen lg:gap-8">
+          <div className="lg:w-2/5 lg:py-24 pt-12 lg:pl-8 lg:sticky lg:top-0 ">
+            <main>
+              <div className="flex flex-col pb-4 relative min-w-[300px]">
+                <div className="text-layer">
+                  <WaveName />
+                  <h2 className="text-blue-white text-xl">
+                    Tech Lead at MarinaChain
+                  </h2>
+                  <h3 className="text-blue-white/[0.8] font-mono text-[15.5px]">
+                    Inventive, elegant solutions for the web.
+                  </h3>
                 </div>
+              </div>
 
-                <nav className="pt-12 hidden lg:block">
-                  <ul className="flex flex-col space-y-4">
-                    <Tab
-                      to="#about"
-                      text="about"
-                      isActive={activeTab === "about"}
-                      setActiveTab={setActiveTab}
-                    />
-                    <Tab
-                      to="#experience"
-                      text="experience"
-                      isActive={activeTab === "experience"}
-                      setActiveTab={setActiveTab}
-                    />
-                    <Tab
-                      to="#projects"
-                      text="projects"
-                      isActive={activeTab === "projects"}
-                      setActiveTab={setActiveTab}
-                    />
-                  </ul>
-                </nav>
+              <nav className="pt-12 hidden lg:block">
+                <ul className="flex flex-col space-y-4">
+                  <Tab
+                    to="#about"
+                    text="about"
+                    isActive={activeTab === "about"}
+                    setActiveTab={setActiveTab}
+                  />
+                  <Tab
+                    to="#experience"
+                    text="experience"
+                    isActive={activeTab === "experience"}
+                    setActiveTab={setActiveTab}
+                  />
+                  <Tab
+                    to="#projects"
+                    text="projects"
+                    isActive={activeTab === "projects"}
+                    setActiveTab={setActiveTab}
+                  />
+                </ul>
+              </nav>
 
-                <Socials />
-              </main>
-            </div>
-            <div className="overflow-auto lg:w-1/2 ">
-              {children}
-              <section className="mb-8 text-blue-white/[0.5] font-light text-sm">
-                Built w/ ❤️ in Gatsby and Tailwind CSS. Roboto Slab & Neue
-                Montreal Typeface.
-              </section>
-            </div>
+              <Socials />
+            </main>
+          </div>
+          <div className="overflow-auto lg:w-1/2 ">
+            {children}
+            <section className="mb-8 text-blue-white/[0.5] font-light text-sm">
+              Built w/ ❤️ in Gatsby and Tailwind CSS. Roboto Slab & Neue
+              Montreal Typeface.
+            </section>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 };
