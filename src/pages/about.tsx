@@ -18,7 +18,7 @@ const About: React.FC = () => {
       </p>
       <br />
       <p>
-        Riding the entrepreneurial wave since secondary school, I've surfed all
+        Riding the entrepreneurial wave since secondary school, I've sailed all
         the way from the bustling breakers of{" "}
         <strong>
           <a
@@ -51,6 +51,8 @@ const About: React.FC = () => {
           <a
             href="https://open.spotify.com/artist/0w1g0B53ZzbTkbev0WDAmm?si=BMuVaWz-TZWUe0c7QdW32A"
             className="font-medium text-bright-blue opacity-80 hover:opacity-100 transition-opacity duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             indie music
           </a>
