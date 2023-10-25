@@ -27,10 +27,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div
         onMouseEnter={() => setCardHovered(true)}
         onMouseLeave={() => setCardHovered(false)}
-        className={`flex items-start p-4 mb-5 rounded-xl transition-all duration-300 ${opacity} hover:opacity-100 hover:bg-[#1e293b]/[0.5] hover:drop-shadow-lg`}
+        className={`flex flex-col space-y-2 sm:space-y-0 sm:flex-row items-start p-4 mb-5 rounded-xl transition-all duration-300 ${opacity} hover:opacity-100 hover:bg-[#1e293b]/[0.5] hover:drop-shadow-lg`}
       >
         {/* Image part */}
-        <div className="mr-5 min-w-[105px] max-w-[150px]">
+        <div className="mr-5 sm:min-w-[105px] sm:max-w-[150px]">
           <img src={imageSrc} alt={title} className="rounded-lg" />
         </div>
 
@@ -41,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               isCardHovered ? "text-bright-blue" : ""
             }`}
           >
-            <div className="flex items-center text-blue-white hover:text-bright-blue font-mono font-medium tracking-wide">
+            <div className="flex items-center text-blue-white hover:text-bright-blue font-mono font-medium tracking-wide lg:ml-0 ml-1">
               {" "}
               {/* Adjusted this div */}
               {title}

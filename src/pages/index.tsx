@@ -8,7 +8,7 @@ import Projects from "./projects";
 const IndexPage: React.FC = () => {
   return (
     <Layout pageTitle="Home Page">
-      <div className="space-y-20 lg:space-y-40 py-32">
+      <div className="space-y-28 lg:space-y-40 py-32">
         <About />
         <Experience />
         <Projects />
