@@ -55,26 +55,28 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
               isCardHovered ? "text-bright-blue" : ""
             }`}
           >
-            <div className="flex mr-2 text-blue-white hover:text-bright-blue">
-              <span className=" font-mono font-medium tracking-wide">
+            <div className="flex flex-col sm:flex-row mr-2 mb-2 sm:mb-0 text-blue-white hover:text-bright-blue">
+              <span className="text-bright-blue sm:text-blue-white sm:font-mono font-medium sm:font-medium sm:tracking-wide mb-1 sm:mb-0">
                 {company}
               </span>
-              <span className="mx-1 text-gray-400">&nbsp;•&nbsp;</span>
+              <span className="mx-1 text-gray-400 hidden sm:inline">
+                &nbsp;•&nbsp;
+              </span>
               <span className="font-mono font-medium">{jobTitle}</span>
             </div>
             {link && (
               <span
-                className={`transform transition-transform ${
+                className={`hidden sm:block transform transition-transform ${
                   isCardHovered
                     ? "translate-x-2 text-bright-blue"
-                    : "text-blue-white "
+                    : "text-blue-white"
                 }`}
               >
                 →
               </span>
             )}
           </div>
-          <div className="mb-2 space-x-2">
+          <div className="mb-2 space-x-2 space-y-2">
             {techStack.map((tech, index) => (
               <span
                 key={index}

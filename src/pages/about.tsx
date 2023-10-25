@@ -1,4 +1,5 @@
 import * as React from "react";
+import HoverTitle from "../components/HoverTitle";
 
 const About: React.FC = () => {
   return (
@@ -6,6 +7,8 @@ const About: React.FC = () => {
       id="about"
       className="text-blue-white/[0.8] tracking-wider font-mono leading-relaxed"
     >
+      <HoverTitle sectionId="about" title="ABOUT" />
+
       <p>
         <strong className="font-medium text-bright-blue opacity-80 hover:opacity-100 transition-opacity duration-300">
           Hey there!

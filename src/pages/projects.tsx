@@ -2,10 +2,13 @@ import * as React from "react";
 import ProjectCard from "../components/ProjectCard";
 import flooringLabThumbnail from "../assets/flooring_lab.png";
 import webPortfolioThumbnail from "../assets/web_portfolio.png";
+import HoverTitle from "../components/HoverTitle";
 
 const Projects: React.FC = () => {
   return (
     <section id="projects">
+      <HoverTitle sectionId="projects" title="PROJECTS" />
+
       <ProjectCard
         imageSrc={flooringLabThumbnail}
         title="Flooring Lab"

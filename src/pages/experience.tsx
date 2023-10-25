@@ -1,10 +1,13 @@
 import * as React from "react";
 import ExperienceCard from "../components/ExperienceCard";
 import { ExperienceProvider } from "../components/ExperienceProvider";
+import HoverTitle from "../components/HoverTitle";
 
 const Experience: React.FC = () => {
   return (
     <section id="experience">
+      <HoverTitle sectionId="experience" title="EXPERIENCE" />
+
       <ExperienceProvider>
         <ExperienceCard
           startDate="2022"
