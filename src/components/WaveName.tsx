@@ -3,8 +3,8 @@ import React from "react";
 const WaveName: React.FC = () => {
   return (
     <svg
-      width="520"
-      viewBox="0 0 800 100"
+      width="390"
+      viewBox="0 0 600 100"
       xmlns="http://www.w3.org/2000/svg"
       shapeRendering="geometricPrecision"
       textRendering="optimizeLegibility"
