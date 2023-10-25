@@ -3,25 +3,27 @@ import { useState, useEffect } from "react";
 const useSectionHover = (sectionId: string) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  const checkViewport = () => {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    const boundingBox = section.getBoundingClientRect();
+
+    const isWithinViewportTop =
+      boundingBox.top >= 0 && boundingBox.top <= window.innerHeight / 2;
+    const isWithinViewportBottom =
+      boundingBox.bottom >= window.innerHeight / 2 &&
+      boundingBox.bottom <= window.innerHeight;
+
+    setIsHovered(isWithinViewportTop || isWithinViewportBottom);
+  };
+
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      const section = document.getElementById(sectionId);
-      if (!section) return;
-
-      const boundingBox = section.getBoundingClientRect();
-      const isOverSection =
-        e.clientX >= boundingBox.left &&
-        e.clientX <= boundingBox.right &&
-        e.clientY >= boundingBox.top &&
-        e.clientY <= boundingBox.bottom;
-
-      setIsHovered(isOverSection);
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("scroll", checkViewport);
+    checkViewport();
 
     return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("scroll", checkViewport);
     };
   }, [sectionId]);
 
