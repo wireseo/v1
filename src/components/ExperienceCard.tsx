@@ -44,7 +44,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         className={`flex items-start p-4 mb-5 rounded-xl transition-all duration-300 ${opacity} hover:opacity-100 hover:bg-[#1e293b]/[0.5] hover:drop-shadow-lg`}
       >
         {/* Date part */}
-        <div className="mr-5 min-w-[105px]">
+        <div className="mr-5 min-w-[60px] md:min-w-[105px]">
           <span className="block w-full text-sm text-[#4e596b] font-medium">{`${startDate} — ${endDate}`}</span>
         </div>
 
