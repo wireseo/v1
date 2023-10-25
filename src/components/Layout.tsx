@@ -85,15 +85,13 @@ const Layout: React.FC<{
           <div className="lg:w-2/5 lg:py-24 pt-12 lg:pl-8 lg:sticky lg:top-0 ">
             <main>
               <div className="flex flex-col pb-4 relative min-w-[300px]">
-                <div className="text-layer">
-                  <WaveName />
-                  <h2 className="text-blue-white text-xl">
-                    Tech Lead at MarinaChain
-                  </h2>
-                  <h3 className="text-blue-white/[0.8] font-mono text-[15.5px]">
-                    Inventive, elegant solutions for the web.
-                  </h3>
-                </div>
+                <WaveName />
+                <h2 className="text-blue-white text-xl">
+                  Tech Lead at MarinaChain
+                </h2>
+                <h3 className="text-blue-white/[0.8] font-mono text-[15.5px]">
+                  Inventive, elegant solutions for the web.
+                </h3>
               </div>
 
               <nav className="pt-12 hidden lg:block">
