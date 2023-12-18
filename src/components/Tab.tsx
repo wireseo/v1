@@ -48,7 +48,9 @@ const Tab: React.FC<TabProps> = ({ to, text, isActive, setActiveTab }) => {
           <div className={`mr-4 w-16 h-0`}></div>
           <button
             className="text-bright-blue no-underline transform transition-transform hover:translate-x-1 hover:text-bright-blue focus:outline-none"
-            onClick={() => window.open("/Eryn_Seo_Resume_2023.pdf", "_blank")}
+            onClick={() =>
+              window.open("/Eryn_Seo_Revised_Resume.pdf", "_blank")
+            }
           >
             Résumé →
           </button>

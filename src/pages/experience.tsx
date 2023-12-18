@@ -33,7 +33,7 @@ const Experience: React.FC = () => {
         />
       </ExperienceProvider>
       <button
-        onClick={() => window.open("/Eryn_Seo_Resume_2023.pdf", "_blank")}
+        onClick={() => window.open("/Eryn_Seo_Revised_Resume.pdf", "_blank")}
         className="text-blue-white ransform transition-transform hover:translate-x-1 text-blue-500 hover:text-bright-blue border-b-2 border-blue-500 focus:outline-none"
       >
         Download Resume →
